@@ -53,6 +53,8 @@ Retrieve all courses for a specific subject.
   ```
 
 
+
+
 ## Enroll in a course
 
 Enroll a student in a course.
@@ -64,6 +66,25 @@ Enroll a student in a course.
   ```json
   {
     "message": "Enrolled successfully"
+  }
+  ```
+
+
+## Make Payment for a course
+
+- **API Endpoint**: `/courses/{course_id}/pay`
+- **HTTP Method**: POST
+- **Request Body**: 
+  ```json
+  {
+    "amount": 1000
+  }
+  ```
+- **Status Code**: 200
+- **Response Body**:
+  ```json
+  {
+    "message": "Payment successful"
   }
   ```
 
@@ -194,7 +215,154 @@ Submit answers for a specific exam.
         "percentage": 80
     }
     ```
+
+## Teacher
+
+## create mcq exam
+- **API Endpoint**: `/exams/create`
+- **HTTP Method**: POST
+- **Request Body**:
+  ```json
+  {
+    "course_id": 1,
+    "subject": "Mathematics",
+    "type": "MCQ",
+    "title": "Math Exam 1",
+    "duration": 60,
+    "questionsNumber": 10,
+    "questions": [
+      {
+        "text": "What is 2 + 2?",
+        "options": ["3", "4", "5", "6"],
+        "correct_option": "B"
+      },
+      {
+        "text": "What is the square root of 16?",
+        "options": ["2", "4", "8", "16"],
+        "correct_option": "B"
+      },
+      ...
+    ]
+
+  }
+
+
+
+- **Response Body**:
+    ```json
+    {
+        "message": "Exam created successfully"
+    }
   
+    ```
+
+## create written exam
+- **API Endpoint**: `/exams/create`
+- **HTTP Method**: POST
+- **Request Body**:
+  ```json
+  {
+    "course_id": 1,
+    "subject": "Mathematics",
+    "type": "Written",
+    "title": "Math Exam 1",
+    "duration": 60,
+    "questionsNumber": 10,
+    "questions": [
+  {
+    "text": "Describe the process of photosynthesis in plants."
+    marks": 10
+  },
+  {
+    "text": "Explain the concept of gravitational waves."
+    "marks": 10
+  },
+  ...]
+}
+    ```
+- **Response Body**:
+    ```json
+    {
+        "message": "Exam created successfully"
+    }
+  
+    ```
+
+
+### Get the script of a student
+- **API Endpoint**: `/exams/scripts/{exam_id}/{student_id}`
+- **HTTP Method**: GET
+- **Request Body**: None
+- **Status Code**: 200
+<!-- the response body will be the data of written document -->
+-**Response Body**:
+```json
+{
+  "exam_id": 1,
+  "student_id": 1,
+  "script": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl vitae ultricies ultricies, nisl nisl luctus nisl, vitae ultricies nisl",
+  "TimeSubmitted": "2021-07-01T12:00:00Z"
+
+}
+```
+
+
+### check the script of a student
+- **API Endpoint**: `/exams/scripts`
+- **HTTP Method**: POST
+- **Request Body**:
+  ```json
+  {
+    "exam_id": 1
+    "student_id": 1
+  }
+- **Response Body**:
+    ```json
+    {
+        "answers": [
+          {
+            "text": "Describe the process of photosynthesis in plants."
+            "marks": 10
+            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl vitae ultricies ultricies, nisl nisl luctus nisl, vitae ultricies nisl"
+          },
+          {
+            "text": "Explain the concept of gravitational waves."
+            "marks": 10
+            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl vitae ultricies ultricies, nisl nisl luctus nisl, vitae ultricies nisl"
+          },
+          ...
+        ]
+    }
+    ```
+
+### give grades to the script of a student
+- **API Endpoint**: `/exams/scripts`
+- **HTTP Method**: POST
+- **Request Body**:
+  ```json
+  {
+    "exam_id": 1
+    "student_id": 1
+    "answers": [
+          {
+            "text": "Describe the process of photosynthesis in plants."
+            "marks": 10
+            "marks_obtained": 8
+            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl vitae ultricies ultricies, nisl nisl luctus nisl, vitae ultricies nisl"
+          },
+          {
+            "text": "Explain the concept of gravitational waves."
+            "marks": 10
+            "marks_obtained": 10
+            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl vitae ultricies ultricies, nisl nisl luctus nisl, vitae ultricies nisl"
+          },
+          ...
+        ]
+  }
+
+
+
+
 
 
 
