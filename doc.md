@@ -1,4 +1,4 @@
-###Student
+### Student
 ## API Endpoint: `/exams?grade={grade}`
 
 - **HTTP Method**: GET
