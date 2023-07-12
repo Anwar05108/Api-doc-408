@@ -1,16 +1,85 @@
-### Student
-## API Endpoint: `/exams?grade={grade}`
+## Student
+### Get Courses according to class
 
+Retrieve all courses for a specific class.
+- **API Endpoint**: `api/courses?class={class}`
+- **HTTP Method**: GET
+- **Request Body**: None
+- **Status Code**: 200
+- **Response Body**:
+  ```json
+  {
+    "class": "8",
+    "courses": [
+      {
+        "id": 1,
+        "name": "Mathematics",
+        "teacher": "Mr. John Doe"
+      },
+      {
+        "id": 2,
+        "name": "Science",
+        "teacher": "Ms. Jane Doe"
+      },
+      ...
+    ]
+  }
+  ```
+### Get Courses according to subject
+
+Retrieve all courses for a specific subject.
+- **API Endpoint**: `api/courses?subject={subject}`
+- **HTTP Method**: GET
+- **Request Body**: None
+- **Status Code**: 200
+- **Response Body**:
+  ```json
+  {
+    "subject": "Mathematics",
+    "courses": [
+      {
+        "id": 1,
+        "name": "Mathematics 1",
+        "teacher": "Mr. John Doe"
+      },
+      {
+        "id": 2,
+        "name": "Mathematics 2",
+        "teacher": "Ms. Jane Doe"
+      },
+      ...
+    ]
+  }
+  ```
+
+
+## Enroll in a course
+
+Enroll a student in a course.
+- **API Endpoint**: `/courses/{course_id}/enroll`
+- **HTTP Method**: POST
+- **Request Body**: None
+- **Status Code**: 200
+- **Response Body**:
+  ```json
+  {
+    "message": "Enrolled successfully"
+  }
+  ```
+
+## Get Exams
+- **API Endpoint**: `api/exams?class={class}`
 - **HTTP Method**: GET
 - **Request Body**: None
 - **Status Code**: 200
 - **Response Body**:
   ```
   {
-    "class" = 9,
+    "class" = "9",
     "exams": [
       {
         "id": 1,
+        "course_id": 1,
         "subject": "Mathematics",
         "type": "MCQ",
         "title": "Math Exam 1",
@@ -20,6 +89,7 @@
      
       {
         "id": 3,
+        "course_id": 1,
         "subject": "Science",
         "type": "Written",
         "title": "Science Exam 1",
@@ -29,8 +99,9 @@
     ]
     }
 
+### Subject Wise exams
+- **API Endpoint**: `api/exams?subject={subject}`
 
-## API Endpoint: `/exams?subject={subject}&class={class}`
 
 - **HTTP Method**: GET
 - **Request Body**: None
@@ -38,12 +109,13 @@
 - **Response Body**:
 ```
 {
-    "class" = 9,
+   
     "subject" = "Mathematics
     "exams": [
       {
         "id": 1,
-        "subject": "Mathematics",
+        "class": "9",
+        "course_id": 1,
         "type": "MCQ",
         "title": "Math Exam 1",
         "duration": 60,
@@ -52,7 +124,8 @@
      
       {
         "id": 3,
-        "subject": "Mathematics",
+        "class": "9",
+        "course_id": 1,
         "type": "Written",
         "title": "Math Exam 2",
         "duration": 40,
@@ -121,6 +194,7 @@ Submit answers for a specific exam.
         "percentage": 80
     }
     ```
+  
 
 
 
