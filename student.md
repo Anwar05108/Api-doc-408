@@ -1,6 +1,6 @@
 ## Student
 
-###Create Account
+### Create Account
 
 Create a new student account.
 - **API Endpoint**: `api/student/createAccount`
