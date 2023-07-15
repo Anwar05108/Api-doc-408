@@ -1,6 +1,6 @@
 ## Student
 
-###Create Account
+### Create Account
 
 Create a new student account.
 - **API Endpoint**: `api/student/createAccount`
@@ -24,7 +24,7 @@ Create a new student account.
   ```
 
 
-### Get Courses according to class
+## Get Courses according to class
 
 
 - **API Endpoint**: `api/student/courses?class={class}`
@@ -50,7 +50,7 @@ Create a new student account.
     ]
   }
   ```
-### Get Courses according to subject
+## Get Courses according to subject
 
 
 - **API Endpoint**: `api/student/courses?subject={subject}`
@@ -145,7 +145,7 @@ Create a new student account.
     ]
     }
 
-### Subject Wise exams
+## Subject Wise exams
 - **API Endpoint**: `api/student/exams?subject={subject}`
 
 
@@ -309,6 +309,7 @@ It is for both written or mcq exam.
   "percentage": 80
 }
 ```
+
 
 ## Request a mentor
 

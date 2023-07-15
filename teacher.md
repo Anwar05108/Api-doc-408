@@ -95,7 +95,7 @@ Create a new teacher account.
     ```
 
 
-### Get the script of a student
+## Get the script of a student
 - **API Endpoint**: `api/teacher/exams/scripts/{exam_id}/{student_id}`
 - **HTTP Method**: GET
 - **Request Body**: None
@@ -113,7 +113,7 @@ Create a new teacher account.
 ```
 
 
-### check the script of a student
+## check the script of a student
 - **API Endpoint**: `api/teacher/exams/scripts`
 - **HTTP Method**: POST
 - **Request Body**:
@@ -141,7 +141,7 @@ Create a new teacher account.
     }
     ```
 
-### give grades to the script of a student
+## give grades to the script of a student
 - **API Endpoint**: `api/teacher/exams/scripts`
 - **HTTP Method**: POST
 - **Request Body**:
