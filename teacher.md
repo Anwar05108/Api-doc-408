@@ -100,7 +100,7 @@ Create a new teacher account.
 - **HTTP Method**: GET
 - **Request Body**: None
 - **Status Code**: 200
-<!-- the response body will be the data of written document -->
+
 -**Response Body**:
 ```json
 {
