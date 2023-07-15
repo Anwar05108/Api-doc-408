@@ -309,3 +309,20 @@ It is for both written or mcq exam.
   "percentage": 80
 }
 ```
+
+## Request a mentor
+
+- **API Endpoint**: `/api/student/get-mentor`
+- **HTTP Method**: POST
+- **Request Body**:
+  ```json
+  {
+    "subject": "Mathematics"
+  }
+- **Response Body**:
+    ```json
+    {
+        "message": "Request sent successfully"
+    }
+    ```
+
