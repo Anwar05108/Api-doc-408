@@ -5,7 +5,7 @@
 Create a new teacher account.
 - **API Endpoint**: `api/teacher/createAccount`
 - **HTTP Method**: POST
-- **Status Code**: 200
+- **Status Code**: 201
 - **Request Body**:
   ```json
   {
@@ -24,7 +24,7 @@ Create a new teacher account.
   }
   ```
 
-## create mcq exam
+## Create mcq exam
 - **API Endpoint**: `api/teacher/exams/create`
 - **HTTP Method**: POST
 - **Request Body**:
@@ -32,20 +32,22 @@ Create a new teacher account.
   {
     "course_id": 1,
     "subject": "Mathematics",
+    "class": 11",
     "type": "MCQ",
     "title": "Math Exam 1",
-    "duration": 60,
-    "questionsNumber": 10,
+    "duration": 45,
+    "questionsNumber": 60,
+    "marks": 60,
     "questions": [
       {
-        "text": "What is 2 + 2?",
-        "options": ["3", "4", "5", "6"],
+        "text": "A triangle has sides of length 12, 14, and 16 units. Find its area.",
+        "options": ["72 sq units", "80 sq units", "84 sq units", "90 sq units"],
         "correct_option": "B"
       },
       {
-        "text": "What is the square root of 16?",
+        "text": "Determine the number of primitive roots of 17",
         "options": ["2", "4", "8", "16"],
-        "correct_option": "B"
+        "correct_option": "D"
       },
       ...
     ]
@@ -62,16 +64,18 @@ Create a new teacher account.
   
     ```
 
-## create written exam
+## Create written exam
 - **API Endpoint**: `api/teacher/exams/create`
 - **HTTP Method**: POST
+- **Status Code**: 201
 - **Request Body**:
   ```json
   {
     "course_id": 1,
-    "subject": "Mathematics",
+    "subject": "Science",
+    "class": "8",
     "type": "Written",
-    "title": "Math Exam 1",
+    "title": "Science Exam 1",
     "duration": 60,
     "questionsNumber": 10,
     "questions": [
@@ -95,44 +99,47 @@ Create a new teacher account.
     ```
 
 
+## Update Exam
+- **API Endpoint**: `api/teacher/exams/update/{exam_id}`
+- **HTTP Method**: PUT
+- **Status Code**: 200
+- **Request Body**:
+  ```json
+  {
+    "course_id": 1,
+    "subject": "Mathematics",
+    "class": "8",
+    "type": "MCQ",
+    "title": "Math Exam 1",
+    "duration": 60,
+    "questionsNumber": 10,
+    "questionsToBeUpdated": 
+      {
+        "id": 2,
+        "question": "What is 2 + 2?",
+        "options": ["3", "4", "5", "6"],
+        "correct_option": "B"
+      } 
+
+  }
+
 ## Get the script of a student
 - **API Endpoint**: `api/teacher/exams/scripts/{exam_id}/{student_id}`
 - **HTTP Method**: GET
 - **Request Body**: None
 - **Status Code**: 200
 
--**Response Body**:
-```json
-{
-  "exam_id": 1,
-  "student_id": 1,
-  "script": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl vitae ultricies ultricies, nisl nisl luctus nisl, vitae ultricies nisl",
-  "TimeSubmitted": "2021-07-01T12:00:00Z"
-
-}
-```
-
-
-## check the script of a student
-- **API Endpoint**: `api/teacher/exams/scripts`
-- **HTTP Method**: POST
-- **Request Body**:
-  ```json
-  {
-    "exam_id": 1
-    "student_id": 1
-  }
 - **Response Body**:
     ```json
     {
-        "answers": [
+        "script": [
           {
-            "text": "Describe the process of photosynthesis in plants."
+            "question": "Describe the process of photosynthesis in plants."
             "marks": 10
             "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl vitae ultricies ultricies, nisl nisl luctus nisl, vitae ultricies nisl"
           },
           {
-            "text": "Explain the concept of gravitational waves."
+            "question": "Explain the concept of gravitational waves."
             "marks": 10
             "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl vitae ultricies ultricies, nisl nisl luctus nisl, vitae ultricies nisl"
           },
@@ -141,9 +148,13 @@ Create a new teacher account.
     }
     ```
 
-## give grades to the script of a student
+
+
+
+## Evaluate script of a student
 - **API Endpoint**: `api/teacher/exams/scripts`
 - **HTTP Method**: POST
+- **Status Code**: 200
 - **Request Body**:
   ```json
   {
@@ -151,22 +162,56 @@ Create a new teacher account.
     "student_id": 1
     "answers": [
           {
-            "text": "Describe the process of photosynthesis in plants."
-            "marks": 10
-            "marks_obtained": 8
+            "question": "Describe the process of photosynthesis in plants.",
+            "marks": 10,
+            "marks_obtained": 8,
             "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl vitae ultricies ultricies, nisl nisl luctus nisl, vitae ultricies nisl"
           },
           {
-            "text": "Explain the concept of gravitational waves."
-            "marks": 10
-            "marks_obtained": 10
+            "question": "Explain the concept of gravitational waves.",
+            "marks": 10,
+            "marks_obtained": 10,
             "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl vitae ultricies ultricies, nisl nisl luctus nisl, vitae ultricies nisl"
           },
           ...
         ]
   }
 
+- **Response Body**:
+    ```json
+    {
+        "message": "Grades given successfully"
+    }
+    ```
 
+
+
+## Get data of a student activity
+- **API Endpoint**: `api/teacher/exams/getTabData/{exam_id}/{student_id}`
+- **HTTP Method**: GET
+- **Request Body**: None
+- **Status Code**: 200
+- **Response Body**:
+```json
+{
+  "tooManyTabsFlag": true,
+  "tabMinimizedFlag": true,
+}
+```
+
+
+## Cancel an exam of a student
+
+- **API Endpoint**: `api/teacher/exams/cancel/{exam_id}/{student_id}`
+- **HTTP Method**: POST
+- **Request Body**: None
+- **Status Code**: 200
+- **Response Body**:
+    ```json
+    {
+        "message": "Exam cancelled successfully"
+    }
+    ```
 
 
 

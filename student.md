@@ -5,7 +5,7 @@
 Create a new student account.
 - **API Endpoint**: `api/student/createAccount`
 - **HTTP Method**: POST
-- **Status Code**: 200
+- **Status Code**: 201
 - **Request Body**:
   ```json
   {
@@ -99,6 +99,7 @@ Create a new student account.
 
 - **API Endpoint**: `api/student/courses/{course_id}/pay`
 - **HTTP Method**: POST
+- **Status Code**: 200
 - **Request Body**: 
   ```json
   {
@@ -217,6 +218,7 @@ Submit answers for a specific exam.
 
 - **API Endpoint**: `/api/student/exams/mcq/{exam_id}/submit`
 - **HTTP Method**: POST
+- **Status Code**: 200
 - **Request Body**:
   ```json
   {
@@ -270,6 +272,7 @@ Submit answers for a specific exam.
 
 - **API Endpoint**: `/api/student/exams/written/{exam_id}/submit`
 - **HTTP Method**: POST
+- **Status Code**: 200
 - **Request Body**:
   ```json
   {
@@ -315,6 +318,7 @@ It is for both written or mcq exam.
 
 - **API Endpoint**: `/api/student/get-mentor`
 - **HTTP Method**: POST
+- **Status Code**: 200
 - **Request Body**:
   ```json
   {

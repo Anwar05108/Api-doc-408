@@ -86,6 +86,25 @@
     ]
 }
 ```
+
+
+## Get details of a teacher
+
+- **API Endpoint**: `/api/admin/teachers/{id}`
+- **HTTP Method**: GET
+- **Request Body**: None
+- **Status Code**: 200
+- **Response Body**:
+```json
+{
+  "id": 1,
+  "name": "John Doe",
+  "email": "John@teacher.com",
+  "phone": "1234567890",
+}
+```
+
+
 ## See exams 
 - **API Endpoint**: `/api/admin/exams`
 - **HTTP Method**: GET
@@ -125,4 +144,6 @@
     ]
 }
 ```
+
+
     
