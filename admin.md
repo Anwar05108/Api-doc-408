@@ -2,7 +2,7 @@
 
 ## Get all students
 
--**API Endpoint**: `/api/admin/students`
+- **API Endpoint**: `/api/admin/students`
 -**HTTP Method**: GET
 -**Request Body**: None
 -**Status Code**: 200
