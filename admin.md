@@ -1,6 +1,7 @@
 ## Admin
 
 ## Get all students
+
 -**API Endpoint**: `/api/admin/students`
 -**HTTP Method**: GET
 -**Request Body**: None
@@ -31,6 +32,7 @@
 ```
 
 ## Get details of a student
+
 -**API Endpoint**: `/api/admin/students/{id}`
 -**HTTP Method**: GET
 -**Request Body**: None
