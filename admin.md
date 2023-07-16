@@ -1,12 +1,11 @@
 ## Admin
 
 ## Get all students
-
 - **API Endpoint**: `/api/admin/students`
--**HTTP Method**: GET
--**Request Body**: None
--**Status Code**: 200
--**Response Body**:
+- **HTTP Method**: GET
+- **Request Body**: None
+- **Status Code**: 200
+- **Response Body**:
 ```json
 {
   "students": [
@@ -32,12 +31,11 @@
 ```
 
 ## Get details of a student
-
--**API Endpoint**: `/api/admin/students/{id}`
--**HTTP Method**: GET
--**Request Body**: None
--**Status Code**: 200
--**Response Body**:
+- **API Endpoint**: `/api/admin/students/{id}`
+- **HTTP Method**: GET
+- **Request Body**: None
+- **Status Code**: 200
+- **Response Body**:
 ```json
 {
   "id": 1,
@@ -64,11 +62,11 @@
 
 ## Get all teachers
 
--**API Endpoint**: `/api/admin/teachers`
--**HTTP Method**: GET
--**Request Body**: None
--**Status Code**: 200
--**Response Body**:
+- **API Endpoint**: `/api/admin/teachers`
+- **HTTP Method**: GET
+- **Request Body**: None
+- **Status Code**: 200
+- **Response Body**:
 ```json
 {
   "teachers": [
@@ -89,11 +87,11 @@
 }
 ```
 ## See exams 
--**API Endpoint**: `/api/admin/exams`
--**HTTP Method**: GET
--**Request Body**: None
--**Status Code**: 200
--**Response Body**:
+- **API Endpoint**: `/api/admin/exams`
+- **HTTP Method**: GET
+- **Request Body**: None
+- **Status Code**: 200
+- **Response Body**:
 ```json
 {
   "exams": [
@@ -103,7 +101,7 @@
       "class": "8",
       "subject": "Mathematics",
       "teacher_id": 1,
-      "date": "2021-05-01",
+      "date": "2021- 05- 01",
       "time": "10:00:00",
       "type": "MCQ",
       "duration": 60,
@@ -116,7 +114,7 @@
       "class": "8",
       "subject": "Science",
       "teachear_id": 2,
-      "date": "2021-05-01",
+      "date": "2021- 05- 01",
       "time": "10:00:00",
       "type": "written",
       "duration": 60,
