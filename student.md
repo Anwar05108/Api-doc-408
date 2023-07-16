@@ -10,7 +10,7 @@ Create a new student account.
   ```json
   {
     "name": "John Doe",
-    "email": "test@test.com",
+    "email": "John@test.com",
     "phone": "1234567890",
     "password": "test123",
     "class": "8",
@@ -255,11 +255,11 @@ Submit answers for a specific exam.
 {
 "questions": [
   {
-    "text": "Describe the process of photosynthesis in plants."
+    "question": "Describe the process of photosynthesis in plants.",
     marks": 10
   },
   {
-    "text": "Explain the concept of gravitational waves."
+    "question": "Explain the concept of gravitational waves.",
     "marks": 10
   },
   ...]
