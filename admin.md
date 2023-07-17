@@ -11,15 +11,6 @@
   "name": "Mathematics",
   "description": "Mathematics course for class 8",
   "class": "8"
-  "exams":[
-    {
-      "exam-id": 1
-    },
-    {
-      "exam-id": 2
-    }
-
-  ]
 }
 
 ```
