@@ -414,4 +414,48 @@ It is for both written or mcq exam.
 }
 ```
 
+## Discussion Forum
+
+Post a question in the discussion forum for a specific exam.
+- **API Endpoint**: `/api/student/discussion-forum/{exam-id}`
+- **HTTP Method**: POST
+- **Status Code**: 200
+- **Request Body**:
+  ```json
+  {
+    "question": "Is the answer of question 3 correct?",
+    "timeStamp" : "2021-05-01T12:00:00"
+  }
+
+- **Response Body**:
+    ```json
+    {
+        "message": "Question posted successfully"
+    }
+    ```
+
+
+Reply to a question in the discussion forum for a specific exam.
+
+- **API Endpoint**: `/api/student/discussion-forum/{exam-id}/{question-id}`
+- **HTTP Method**: POST
+- **Status Code**: 200
+- **Request Body**:
+  ```json
+  {
+    "reply": "Yes, the answer is correct.",
+    "timeStamp" : "2021-05-01T12:00:00"
+
+  }
+
+  ```
+
+- **Response Body**:
+    ```json
+    {
+        "message": "Reply posted successfully"
+    }
+    ```
+
+
  

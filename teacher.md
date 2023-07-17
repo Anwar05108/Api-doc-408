@@ -223,6 +223,25 @@ Create a new teacher account.
     ```
 
 
+## Reply to a qustion of a student in a specific exam
+
+- **API Endpoint**: `api/teacher/exams/chat/{exam-id}/{question-id}`
+- **HTTP Method**: POST
+- **Status Code**: 200
+- **Request Body**:
+```json
+ {
+  "message": "Yes the answer is correct"
+  "timeStamp" : "2021-05-01T12:00:00"
+}
+```
+- **Response Body**:
+  ```json
+    {
+        "message": "Message sent successfully"
+    }
+    ```
+
 ## Get data of a student activity
 - **API Endpoint**: `api/teacher/exams/activity`
 - **HTTP Method**: POST
