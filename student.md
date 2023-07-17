@@ -38,13 +38,19 @@ Create a new student account.
     "courses": [
       {
         "id": 1,
-        "name": "Mathematics",
-        "teacher": "Mr. John Doe"
+        "subject": "Mathematics",
+        "name": "Mathematics 1",
+        "description": "This course focuses on the basics of mathematics",
+        "price": 1000,
+        "no_of_exams": 30,
       },
       {
         "id": 2,
-        "name": "Science",
-        "teacher": "Ms. Jane Doe"
+        "subject": "Science",
+        "name": "Science 1",
+        "description": "This course focuses on the basics of science",
+        "price": 1200,
+        "no_of_exams": 45,
       },
       ...
     ]
@@ -61,16 +67,22 @@ Create a new student account.
   ```json
   {
     "subject": "Mathematics",
+    "class": "8",
     "courses": [
       {
         "id": 1,
         "name": "Mathematics 1",
-        "teacher": "Mr. John Doe"
+        "description": "This course focuses on the basics of mathematics",
+        "price": 1000,
+        "no_of_exams": 30,
       },
       {
         "id": 2,
         "name": "Mathematics 2",
-        "teacher": "Ms. Jane Doe"
+        "description": "This course focuses on some advanced topics of mathematics",
+        "price": 1200,
+        "no_of_exams": 45,
+
       },
       ...
     ]
@@ -199,12 +211,12 @@ Create a new student account.
   "questions": [
     {
       "id": 1,
-      "text": "What is 2 + 2?",
+      "question": "What is 2 + 2?",
       "options": ["3", "4", "5", "6"]
     },
     {
       "id": 2,
-      "text": "What is the square root of 16?",
+      "question": "What is the square root of 16?",
       "options": ["2", "4", "8", "16"]
     },
     ...
@@ -239,7 +251,11 @@ Submit answers for a specific exam.
     {
         "score": 80,
         "total_questions": 10,
-        "percentage": 80
+        "percentage": 80,
+        "correct_answers": 8,
+        "incorrect_answers": 2,
+        "unanswered": 0,
+        "merit_position": 211
     }
     ```
 
@@ -330,4 +346,41 @@ It is for both written or mcq exam.
         "message": "Request sent successfully"
     }
     ```
+
+
+## Exam Analytics
+- **API Endpoint**: `/api/student/analytics/{student_id}`
+- **HTTP Method**: GET
+- **Request Body**: None
+- **Status Code**: 200
+- **Response Body**:
+```json
+{
+  "student_id": 1,
+  "student_name": "John Doe",
+  "class": "9",
+  "total_exams": 10,
+  "total_exams_taken": 5,
+  "total_exams_left": 5,
+  "average_score": 80,
+  "merit_position": 120,  
+  "exams": [
+    {
+      "exam_id": 1,
+      "exam_title": "Science Exam",
+      "score": 80,
+      "total_questions": 10,
+      "percentage": 80
+    },
+    {
+      "exam_id": 2,
+      "exam_title": "Math Exam",
+      "score": 70,
+      "total_questions": 10,
+      "percentage": 70
+    },
+    ...
+  ]
+}
+```
 

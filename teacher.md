@@ -187,17 +187,21 @@ Create a new teacher account.
 
 
 ## Get data of a student activity
-- **API Endpoint**: `api/teacher/exams/getTabData/{exam_id}/{student_id}`
-- **HTTP Method**: GET
-- **Request Body**: None
-- **Status Code**: 200
-- **Response Body**:
+- **API Endpoint**: `api/teacher/exams/activity`
+- **HTTP Method**: POST
+- **Request Body**: 
 ```json
 {
-  "tooManyTabsFlag": true,
+  "exam_id": 14,
+  "student_id": 10,
   "tabMinimizedFlag": true,
+  "tooManyTabsFlag": true,
+  "time": "09/10/2023 12:30:00"
 }
 ```
+- **Status Code**: 200
+- **Response Body**: None
+
 
 
 ## Cancel an exam of a student
