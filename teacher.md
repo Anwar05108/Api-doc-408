@@ -192,13 +192,13 @@ Create a new teacher account.
             "question": "Describe the process of photosynthesis in plants.",
             "marks": 10,
             "marks_obtained": 8,
-            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl vitae ultricies ultricies, nisl nisl luctus nisl, vitae ultricies nisl"
+            "Remarks": "Not enough points"
           },
           {
             "question": "Explain the concept of gravitational waves.",
             "marks": 10,
             "marks_obtained": 10,
-            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl vitae ultricies ultricies, nisl nisl luctus nisl, vitae ultricies nisl"
+            "Remarks": "Good answer"
           },
           ...
         ]
