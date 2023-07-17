@@ -184,6 +184,43 @@ Create a new teacher account.
     }
     ```
 
+## Chat with Student
+
+- **API Endpoint**: `api/teacher/exams/chat/{student_id}`
+- **HTTP Method**: GET
+- **Status Code**: 200
+- **Request Body**: None
+- **Response Body**:
+```json
+{
+    "message": "Hello, I need help in the topic of Algebra."
+    "timeStamp": "2021-05-01T12:00:00"
+}
+
+```
+
+
+
+
+
+
+
+- **API Endpoint**: `api/teacher/exams/chat/{student_id}`
+- **HTTP Method**: POST
+- **Status Code**: 200
+- **Request Body**:
+```json
+ {
+  "message": "In which topic of algebra are you facing problem"
+  "timeStamp" : "2021-05-01T12:00:00"
+}
+```
+- **Response Body**:
+  ```json
+    {
+        "message": "Message sent successfully"
+    }
+    ```
 
 
 ## Get data of a student activity

@@ -348,6 +348,36 @@ It is for both written or mcq exam.
     ```
 
 
+## Chat with Mentor
+- **API Endpoint**: `/api/student/chat/{mentor_id}`
+- **HTTP Method**: POST
+- **Status Code**: 200
+- **Request Body**:
+  ```json
+  {
+    "message": "Hello, I need help in the topic of Algebra."
+    "timeStamp": "2021-05-01T12:00:00"
+  }
+
+- **Response Body**:
+    ```json
+    {
+        "message": "Message sent successfully"
+    }
+    ```
+
+- **API Endpoint**: `/api/student/chat/{mentor_id}`
+- **HTTP Method**: GET
+- **Status Code**: 200
+- **Request Body**: None
+- **Response Body**:
+```json
+{
+  "message": "In which topic of algebra are you facing problem"
+  "timeStamp" : "2021-05-01T12:00:00"
+}
+```
+
 ## Exam Analytics
 - **API Endpoint**: `/api/student/analytics/{student_id}`
 - **HTTP Method**: GET
@@ -384,3 +414,4 @@ It is for both written or mcq exam.
 }
 ```
 
+ 
