@@ -24,7 +24,7 @@
 
 ```
 
-- **Response Body":
+- **Response Body**:
 ```json
 {
   "message": "Course created successfully"
