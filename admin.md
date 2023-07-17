@@ -22,7 +22,7 @@
       "name": "Jane Doe",
       "class": "8",
       "roll": 2,
-      "email": "Jane@test.com
+      "email": "Jane@test.com"
     },
     ...
     ]
