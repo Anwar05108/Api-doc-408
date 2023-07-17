@@ -123,6 +123,17 @@
   "name": "John Doe",
   "email": "John@teacher.com",
   "phone": "1234567890",
+  "dueTasks":
+  [
+    {
+    "exam_id": 1,
+    "student_id": 1,
+    },
+    {
+    "exam_id": 2,
+    "student_id": 1,
+    },
+  ]
 }
 ```
 
