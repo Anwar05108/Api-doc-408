@@ -32,7 +32,7 @@ Create a new teacher account.
   {
     "course_id": 1,
     "subject": "Mathematics",
-    "class": 11",
+    "class": 11,
     "type": "MCQ",
     "title": "Math Exam 1",
     "duration": 45,
@@ -80,11 +80,11 @@ Create a new teacher account.
     "questionsNumber": 10,
     "questions": [
   {
-    "text": "Describe the process of photosynthesis in plants."
+    "question": "Describe the process of photosynthesis in plants.",
     marks": 10
   },
   {
-    "text": "Explain the concept of gravitational waves."
+    "question": "Explain the concept of gravitational waves.",
     "marks": 10
   },
   ...]
