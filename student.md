@@ -300,6 +300,9 @@ Submit answers for a specific exam.
     ```
 
 
+
+
+
 ## Give Written Exam
 
 - **API Endpoint**: `/api/student/exams/written/{exam_id}`
@@ -351,6 +354,28 @@ Submit answers for a specific exam.
     }
     ```
 
+
+## Edit Submission
+- **API endpoint**: `/api/student/exams/{exam_id}/edit`
+- **HTTP Method**: PUT
+- **Request Body**:
+  ```json
+  {
+    "answers": [
+      {
+        "question_id": 1,
+        "answer": "Photosynthesis is the process by which plants make their own food using carbon dioxide, water and sunlight."
+      }
+      
+    ]
+  }
+
+- **Response Body**:
+    ```json
+    {
+        "message": "Exam edited successfully"
+    }
+    ```
 ## Get Results 
 It is for both written or mcq exam.
 - **API Endpoint**: `/api/student/exams/{examId}/results`
