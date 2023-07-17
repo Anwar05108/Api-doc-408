@@ -9,6 +9,7 @@
 ```json
 {
   "name": "Mathematics",
+  "description": "Mathematics course for class 8",
   "class": "8"
   "exams":[
     {
