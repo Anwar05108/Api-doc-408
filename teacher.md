@@ -250,7 +250,7 @@ Create a new teacher account.
     ```
 
 
-## Reply to a qustion of a student in a specific exam
+## Reply to a question of a student in a specific exam
 
 - **API Endpoint**: `api/teacher/exams/chat/{exam-id}/{question-id}`
 - **HTTP Method**: POST
