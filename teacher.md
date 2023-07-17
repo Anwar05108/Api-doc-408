@@ -81,7 +81,7 @@ Create a new teacher account.
     "questions": [
   {
     "question": "Describe the process of photosynthesis in plants.",
-    marks": 10
+    "marks": 10
   },
   {
     "question": "Explain the concept of gravitational waves.",
