@@ -62,7 +62,7 @@ Create a new student account.
 ## Get Courses according to subject
 
 
-- **API Endpoint**: `api/student/courses?subject={subject}`
+- **API Endpoint**: `api/student/subject={subject}&class={class}`
 - **HTTP Method**: GET
 - **Request Body**: None
 - **Status Code**: 200
@@ -130,6 +130,41 @@ Create a new student account.
     "message": "Payment successful"
   }
   ```
+
+## Get Exams in a course
+- **API Endpoint**: `api/student/courses/{course_id}/exams`
+- **HTTP Method**: GET
+- **Request Body**: None
+- **Status Code**: 200
+- **Response Body**:
+```json
+{
+  "course_id": 1,
+  "exams": [
+    {
+      "id": 1,
+      "subject": "Mathematics",
+      "type": "MCQ",
+      "title": "Math Exam 1",
+      "duration": 60,
+      "questions": 10,
+      "due_date": "2021-05-20T00:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "subject": "Mathematics",
+      "type": "Written",
+      "title": "Math Exam 2",
+      "duration": 40,
+      "questions": 7,
+      "due_date": "2021-05-20T00:00:00.000Z"
+    },
+    ...
+  ]
+}
+```
+
+
 
 ## Get Exams
 - **API Endpoint**: `api/student/exams?class={class}`
