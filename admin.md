@@ -1,5 +1,35 @@
 ## Admin
 
+
+## Add a course
+- **API Endpoint**: `/api/admin/courses/add`
+- **HTTP Method**: POST
+- **Status Code**: 201
+- **Request Body**:
+```json
+{
+  "name": "Mathematics",
+  "class": "8"
+  "exams":[
+    {
+      "exam-id": 1
+    },
+    {
+      "exam-id": 2
+    }
+
+  ]
+}
+
+```
+
+- **Response Body":
+```json
+{
+  "message": "Course created successfully"
+}
+```
+
 ## Get all students
 - **API Endpoint**: `/api/admin/students`
 - **HTTP Method**: GET
