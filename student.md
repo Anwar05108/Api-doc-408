@@ -35,10 +35,12 @@ Create a new student account.
   ```json
   {
     "class": "8",
+    
     "courses": [
       {
         "id": 1,
         "subject": "Mathematics",
+        "rating": 4.5,
         "name": "Mathematics 1",
         "description": "This course focuses on the basics of mathematics",
         "price": 1000,
@@ -47,6 +49,7 @@ Create a new student account.
       {
         "id": 2,
         "subject": "Science",
+        "rating": 4.5,
         "name": "Science 1",
         "description": "This course focuses on the basics of science",
         "price": 1200,
@@ -72,6 +75,7 @@ Create a new student account.
       {
         "id": 1,
         "name": "Mathematics 1",
+        "rating": 4.5,
         "description": "This course focuses on the basics of mathematics",
         "price": 1000,
         "no_of_exams": 30,
@@ -79,6 +83,7 @@ Create a new student account.
       {
         "id": 2,
         "name": "Mathematics 2",
+        "rating": 4.5,
         "description": "This course focuses on some advanced topics of mathematics",
         "price": 1200,
         "no_of_exams": 45,
@@ -457,5 +462,22 @@ Reply to a question in the discussion forum for a specific exam.
     }
     ```
 
+## Give rating to course
+
+- **API Endpoint**: `/api/student/rating/{course_id}`
+- **HTTP Method**: POST
+- **Status Code**: 200
+- **Request Body**:
+  ```json
+  {
+    "rating": 4
+  }
+  ```
+- **Response Body**:
+    ```json
+    {
+        "message": "Rating submitted successfully"
+    }
+    ```
 
  
