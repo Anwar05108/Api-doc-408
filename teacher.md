@@ -40,12 +40,12 @@ Create a new teacher account.
     "marks": 60,
     "questions": [
       {
-        "text": "A triangle has sides of length 12, 14, and 16 units. Find its area.",
+        "question": "A triangle has sides of length 12, 14, and 16 units. Find its area.",
         "options": ["72 sq units", "80 sq units", "84 sq units", "90 sq units"],
         "correct_option": "B"
       },
       {
-        "text": "Determine the number of primitive roots of 17",
+        "question": "Determine the number of primitive roots of 17",
         "options": ["2", "4", "8", "16"],
         "correct_option": "D"
       },

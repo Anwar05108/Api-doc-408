@@ -251,12 +251,12 @@ Create a new student account.
   "questions": [
     {
       "id": 1,
-      "question": "What is 2 + 2?",
-      "options": ["3", "4", "5", "6"]
+      "question": "A triangle has sides of length 12, 14, and 16 units. Find its area.",
+      "options": ["72 sq units", "80 sq units", "84 sq units", "90 sq units"]
     },
     {
       "id": 2,
-      "question": "What is the square root of 16?",
+      "question": "Determine the number of primitive roots of 17",
       "options": ["2", "4", "8", "16"]
     },
     ...
