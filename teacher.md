@@ -123,6 +123,33 @@ Create a new teacher account.
 
   }
 
+## Get scripts of student
+- **API Endpoint**: `api/teacher/exams/scripts/`
+- **HTTP Method**: GET
+- **Status Code**: 200
+- **Request Body**: None
+- **Response Body**:
+    ```json
+    {
+        "scripts": [
+          {
+            "student_id": 1,
+            "exam_id": 1,
+          },
+          {
+            "student_id": 2,
+            "exam_id": 1,
+          },
+
+          {
+            "student_id": 1,
+            "exam_id": 2,
+          }
+          ...
+        ]
+    }
+    ```
+
 ## Get the script of a student
 - **API Endpoint**: `api/teacher/exams/scripts/{exam_id}/{student_id}`
 - **HTTP Method**: GET
